@@ -2,11 +2,11 @@
 import './App.css';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm'
-import About from './components/About';
+// import About from './components/About';
 import Alert from './components/Alert';
 import { useState } from 'react';
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 
 let name = "sathwik";
@@ -48,16 +48,20 @@ function App() {
   }
   return (
     <>
-   <Router>
+   {/* <Router> */}
       <Navbar title='TextUtils' aboutText="About Text Utils" mode={mode} toggleMode={toggleMode} />
       <Alert alert={alert} />
       <div className="container">
-        <Routes>
+        {/* <Routes>
           <Route exact path="/about" element={<About />} />
           <Route exact path="/" element={<TextForm showAlert={showAlert} heading="Enter text to analyze" mode={mode} />} />
-        </Routes>
+          
+        </Routes> */
+        <TextForm showAlert={showAlert} heading="Enter text to analyze" mode={mode} />
+        
+        }
       </div>
-    </Router>
+    {/* </Router> */}
     </>
   );
 }
